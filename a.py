@@ -21,7 +21,9 @@ def imshow(img):
 # print(''.join('%5s' % classes[labels[j]] for j in range(4)))
 
 if __name__ == '__main__':
+    #the ways for augment
     augment_ways = Spin(angle=77,possibility=1)
+    #if no dataset, change the parameter download to true to download the dataset
     trainset=CIFAR10(root=r'C:\Users\Administrator\Desktop\cifar-10-python',train=True,download=True,augment=augment_ways)
     testset=CIFAR10(root=r'C:\Users\Administrator\Desktop\cifar-10-python',train=False,download=True,augment=augment_ways)
     trainloader=torch.utils.data.DataLoader(trainset,batch_size=4,shuffle=True,num_workers=0)
