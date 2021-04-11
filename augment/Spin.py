@@ -1,10 +1,13 @@
 from augment.Augment import Augment
 import PIL
-import random
 
 
 # inherit from Augment
 # rotate an image at a specific angle
+#   args:
+#           angle(int),the angle for rotating a picture
+#           possibility(float): the possibility for fliping a picture 
+#                               range [0,1]
 class Spin(Augment):
     def __init__(self, **args):
         super(Spin, self).__init__(args['possibility'])
