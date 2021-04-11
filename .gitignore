@@ -1,0 +1,4 @@
+batches.meta
+data_batch_*
+test_batch
+__pycache__
